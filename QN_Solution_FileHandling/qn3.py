@@ -25,8 +25,8 @@ def PopAnimal():
 def ReadData():
     try:
         with open('AnimalData.txt', 'r') as file:
-            for line in file:
-                PushAnimal(line.strip())
+            for i in file:
+                PushAnimal(i.strip())
     except FileNotFoundError:
         print("AnimalData.txt not found. Please try again")
 

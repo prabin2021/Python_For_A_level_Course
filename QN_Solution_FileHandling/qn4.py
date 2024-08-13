@@ -5,7 +5,7 @@ class TreasureChest:
         self.__points = points
 
     def getQuestion(self):
-        return self.__question
+        return self.question
 
     def checkAnswer(self, user_answer):
         return user_answer == self.__answer  ##striplower
