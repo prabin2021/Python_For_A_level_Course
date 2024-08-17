@@ -1,4 +1,4 @@
-# Question1_N23.py
+# 9618/43/O/N/23
 
 # Iterative function to count the number of lowercase vowels in a string
 def IterativeVowels(Value):
@@ -32,5 +32,4 @@ if __name__ == "__main__":
     result_recursive = RecursiveVowels("imagine")
     print("Number of vowels in 'imagine' (Recursive):", result_recursive)
 
-# (a) (iii) and (b) (iii) Testing the program
-# Run this script and take a screenshot of the output
+

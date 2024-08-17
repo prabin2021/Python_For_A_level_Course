@@ -1,7 +1,6 @@
 # 9618/43/O/N/23
 # (a) (i)
 Queue = [""] * 50
-
 HeadPointer = -1
 TailPointer = 0
 
@@ -9,7 +8,6 @@ TailPointer = 0
 def Enqueue(id_str):
     global TailPointer
     global HeadPointer
-
     if TailPointer >= 50:
         print("Queue is already full.")
     else:
@@ -44,9 +42,7 @@ def ReadData():
         for line in file:
             id_str = line.strip()
             Enqueue(id_str)
-
 #(c (i)
-
 class RecordData:
     def __init__(self, id_str):
         self.ID = id_str  # store game ID
@@ -61,7 +57,6 @@ def TotalData():
     global NumberRecords
     DataAccessed = Dequeue()
     Flag = False
-
     if DataAccessed == "khali":
         return
 
@@ -79,13 +74,16 @@ def TotalData():
     if not Flag:
         Records[NumberRecords] = RecordData(DataAccessed)
         NumberRecords += 1
-
+def OutputRecord():
+    for i in Records:
+        if i is not None:
+            print(f"Game ID: {i.ID}, Total: {i.Total}")
 if __name__ == "__main__":
     ReadData()
     
     while HeadPointer != -1:
         TotalData()
+    OutputRecord()
+    
 
-    for record in Records:
-        if record is not None:
-            print(f"Game ID: {record.ID}, Total: {record.Total}")
+    
