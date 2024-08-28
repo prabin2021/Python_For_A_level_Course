@@ -1,5 +1,6 @@
 #9618/42/O/N/22
-Jobs = [[-1, -1] for _ in range(100)] 
+for _ in range(100):
+    Jobs = [-1, -1] 
 NumberOfJobs = 0  
 
 def Initialise():
@@ -30,7 +31,7 @@ def InsertionSort():
 def PrintArray():
     global Jobs, NumberOfJobs
     for i in range(NumberOfJobs):
-        print(f"{Jobs[i][0]} job have priority {Jobs[i][1]}")
+        print(f"{Jobs[i][0]} priority {Jobs[i][1]}")
 
 def main():
     Initialise()
